@@ -42,5 +42,6 @@
 #include "NexGpio.h"
 #include "NexRtc.h"
 #include "NexSwitch.h"
+#include "ESPNexUpload.h"
 
 #endif /* #ifndef __NEXTION_H__ */
