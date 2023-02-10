@@ -85,6 +85,14 @@ public: /* methods */
     bool Set_font_color_pco(uint32_t number);			
 	
     /**
+     * Set aph attribute of component
+     *
+     * @param number - To set up the data
+     * @return true if success, false for failure
+     */
+    bool Set_opaqueness_aph(uint32_t number);	
+
+    /**
      * Get xcen attribute of component
      *
      * @param number - buffer storing data retur

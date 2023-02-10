@@ -96,6 +96,24 @@ bool NexText::Set_font_color_pco(uint32_t number)
     return recvRetCommandFinished();
 }
 
+bool NexText::Set_opaqueness_aph(uint32_t number)
+{
+    char buf[10] = {0};
+    String cmd;
+    
+    utoa(number, buf, 10);
+    cmd += getObjName();
+    cmd += ".aph=";
+    cmd += buf;
+    sendCommand(cmd.c_str());
+	
+    cmd = "";
+    cmd += "ref ";
+    cmd += getObjName();
+    sendCommand(cmd.c_str());
+    return recvRetCommandFinished();
+}
+
 uint32_t NexText::Get_place_xcen(uint32_t *number)
 {
     String cmd;
